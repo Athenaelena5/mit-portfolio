@@ -1,0 +1,239 @@
+body {
+    font-family: 'Inter', sans-serif; /* Change font to Inter */
+    background-color: #F7F1E5; /* Light background */
+    }
+    
+
+header {
+    position: flex;
+    top: 0;
+    left: 0;
+    right: 70px;
+    z-index: 100;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Instrument Sans', Arial, sans-serif;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between nav items */
+}
+
+main {
+    text-align: center;
+    padding: 40px 150px; /* Increased padding for more space on sides */
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0; /* Adjust padding for spacing */
+}
+
+.gallery-item {
+    position: relative; /* Enable positioning for the overlay */
+    overflow: hidden; /* Prevent overflow of the overlay */
+    width: 30%; /* Adjust width for three columns */
+    margin: 10px 0; /* Space between images */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.gallery-item img {
+    width: 400px; /* Set a fixed width */
+    height: 500px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio while filling the dimensions */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    filter: brightness(0.5); /* Darken the image */
+}
+
+.overlay {
+    position: absolute; /* Position overlay on top of the image */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Text color */
+    font-size: 1.5em; /* Adjust font size */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff; /* Footer background */
+}
+
+.logo {
+    width: 180px; /* Smaller logo for the menu icon */
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 40px 20px;
+    height: 100vh;
+}
+
+.arch-container {
+    position: relative;
+    width: 100%;
+    min-height: 80vh; /* Change from 100vh to min-height: 80vh */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 100px; /* Reduced padding */
+}
+
+.profile-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.center-logo {
+    width: 500px;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.footer {
+    width: 100%;
+    background: #F7F1E5;
+    backdrop-filter: blur(5px);
+    padding: 20px 0;
+    margin-top: 100px; /* Add margin to create space between content and footer */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.footer-logo-img {
+    width: 100px;
+    height: auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: #44392b;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: linear-gradient(45deg, #c3a86e, #91764c);
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #9c845c;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+.header-nav a {
+    margin: 0 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #372929; /* Default text color */
+    position: relative; /* Positioning for the pseudo-element */
+    overflow: hidden; /* Prevent overflow for the folding effect */
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.header-nav a::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Center the underline */
+    bottom: -4px; /* Position the underline below the text */
+    width: 100%; /* Full width of the text */
+    height: 2px; /* Height of the underline */
+    background: #978978; /* Color of the underline */
+    transform: translateX(-50%) scaleX(0); /* Center and hide the underline */
+    transition: transform 0.3s ease; /* Transition for the underline */
+}
+
+.header-nav a:hover {
+    color: #978978; /* Change text color on hover */
+    transform: perspective(500px) rotateX(10deg); /* Folding effect */
+}
+
+.header-nav a:hover::after {
+    transform: translateX(-50%) scaleX(1); /* Show the underline on hover */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 50px;
+    margin-top: 60px;
+    color: #44392b; /* Change this to your desired color */
+    animation: fadeIn 1s ease forwards; /* Apply the fade-in animation */
+}
+
