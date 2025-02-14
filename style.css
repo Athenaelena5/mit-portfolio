@@ -204,10 +204,10 @@ max-width: 1000px;
     background-color: var(--bg-color);
     position: absolute;
     width: calc(100% + 8px);
-    height: 50%;
+    height: 100%;
     border-left: 3px solid var(--bg-color);
     right: -8px;
-    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+    animation: cursor 0.6s infinite, typing 10s steps(15) infinite;
 }
 @keyframes cursor{
     to{
@@ -215,25 +215,23 @@ max-width: 1000px;
     }
 }
 @keyframes words{
-    0%,
-    20%{
-        content: "Frontend Designer";
+    0%, 10% {
+        content: "Frontend Designer"; /* First text */
     }
-    21%,
-    40%{
-        content: "Web Designer";
+    11%, 20% {
+        content: "Web Designer"; /* Second text */
     }
-    41%,
-    60%{
-        content: "UI / UX Designer";
+    21%, 30% {
+        content: "UI / UX Designer"; /* Third text */
     }
-    61%,
-    80%{
-        content: "Web Developer";
+    31%, 40% {
+        content: "Web Developer"; /* Fourth text */
     }
-    81%,
-    100%{
-        content: "Software Tester";
+    41%, 50% {
+        content: "Software Tester"; /* Fifth text */
+    }
+    51%, 100% {
+        content: ""; /* Clear content at the end */
     }
 }
 @keyframes typing{
@@ -453,11 +451,27 @@ max-width: 1000px;
     transform: translateY(-10px)scale(1.03);
     box-shadow: 0 0 50px var(--main-color);
 }
-.testimonial-item h2{
-    font-size: 2.8rem;
+.testimonial-item h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: white; /*ændre farven på teksten i dine sektioner*/
 }
 .testimonial-item p{
     font-size: 1.3rem;
+}
+.testimonial-item a {
+    color: var(--bg-color);
+    text-decoration: none;
+}
+.testimonial-item a:hover {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+.testimonial-item img {
+    margin-bottom: 3rem; /* Adjust this value to move the images up */
+    width: 70%; /* Optional: ensure the image fits the container */
+    height: auto; /* Maintain aspect ratio */
 }
 .contact{
     background-color: var(--bg-color);
@@ -550,5 +564,75 @@ color: #564839;
     text-align: center;
     font-size: 16px;
     color: #564839;
+}
+.logo img {
+    width: 125px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.skills {
+    padding: 5rem 12%;
+    background: #f5d5b0; /* Background color */
+    text-align: center;
+}
+
+.skills h2 {
+    margin-bottom: 8rem;
+    color: #564839;
+    font-size: 5rem;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10rem; /* Increased space between icons */
+}
+
+.skill-icon {
+    position: relative; /* Position relative for tooltip positioning */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.skill-icon::after {
+    content: attr(data-tooltip); /* Use the data-tooltip attribute */
+    position: absolute;
+    top: 120%; /* Position below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Background color of the tooltip */
+    color: #fff; /* Text color */
+    padding: 0.5rem; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    white-space: nowrap; /* Prevent text wrapping */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for tooltip */
+    pointer-events: none; /* Prevent mouse events on the tooltip */
+}
+
+.skill-icon:hover::after {
+    opacity: 1; /* Show tooltip on hover */
+}
+
+.skill-icon i {
+    font-size: 100px; /* Size of the icons */
+    color: var(--text-color); /* Use your text color */
+    margin-bottom: 1rem; /* Space between icon and text */
+}
+
+.skill-icon p {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+/* Enhanced hover effect */
+.skill-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    color: var(--main-color); /* Change color on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
 }
 
