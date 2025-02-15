@@ -98,6 +98,13 @@ span{
     margin-top: 1rem;
     font-size: 3.5rem;
 }
+.home-content h2 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    line-height: 1;
+}
 .home-content h1{
     font-size: 7rem;
     font-weight: 700;
@@ -106,16 +113,15 @@ span{
     line-height: 1;
     animation: fadeInSlideUp 1s ease forwards;
 }
-.home-img{
-    border-radius: 50%;
+.home-img {
+    border-radius: 100%;
+    overflow: hidden;
 }
-.home-img img{
+.home-img img {
     width: 50rem;
-    height: 50rem;
-    border-radius: 50%;
-
-  
-
+    max-width: 50rem;
+    height: auto;
+    display: block;
 }
 
 
