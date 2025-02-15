@@ -561,107 +561,21 @@ color: #564839;
     color: var(--main-color);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
+<<<<<<< HEAD
 /* styles.css */
-.title-container {
-    position: relative;
-    height: 60px;
-    margin-top: 30px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    overflow: hidden; /* Prevent text from showing outside container */
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
 }
 
-.title {
-    font-size: 42px;
-    color: black;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    pointer-events: none;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    color: rgb(106, 91, 66);
+@keyframes fadeOut {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.8); }
 }
 
-/* Default active state */
-.title.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Default inactive state */
-.title.inactive {
-    opacity: 0;
-    transform: translateY(-20px);
-}
-
-/* Programmer specific styles */
-.title.programmer {
-    font-family: 'Courier New', monospace;
-    border-right: 3px solid transparent;
-    width: 0;
-    white-space: nowrap;
-}
-
-.title.programmer.active {
-    animation: 
-        typing 2.5s steps(30, end) forwards,
-        blink 1s step-end infinite;
-    color: #806345;
-    text-shadow: 0 0 5px rgba(191, 173, 107, 0.499);
-}
-
-.title.programmer::before {
-    content: '> ';
-    color: #b49b73;
-}
-
-/* Designer specific styles */
-.title.designer {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-}
-
-.title.designer.active {
-    animation: designerReveal 0.8s ease forwards;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(45deg, #3e362a, #c3a773);
-}
-
-/* Animations */
-@keyframes typing {
-    0% {
-        width: 0;
-        opacity: 1;
-        border-right-color: #b8a565;
-    }
-    99% {
-        border-right-color: #b6ad6b;
-    }
-    100% {
-        width: 100%;
-        opacity: 1;
-        border-right-color: transparent;
-    }
-}
-
-@keyframes designerReveal {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-        letter-spacing: 8px;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-        letter-spacing: 2px;
-    }
-}
-
-@keyframes blink {
-    from, to { border-right-color: transparent; }
-    50% { border-right-color: #c4ad7e; }
+#expertise {
+    display: inline-block;
+    animation: fadeIn 0.5s ease-in-out;
 }

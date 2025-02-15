@@ -1,46 +1,38 @@
-// script.js
-document.addEventListener('DOMContentLoaded', () => {
-    const titles = document.querySelectorAll('.title');
-    let currentIndex = 0;
-    
-    function updateTitle() {
-        // Remove active class and add inactive to previous
-        titles.forEach((title, index) => {
-            if (index === currentIndex - 1 || (currentIndex === 0 && index === titles.length - 1)) {
-                title.classList.add('inactive');
-            } else {
-                title.classList.remove('inactive');
-            }
-            title.classList.remove('active');
-            
-            // Reset animations
-            if (title.classList.contains('programmer')) {
-                title.style.width = '0';
-            }
-            if (title.classList.contains('designer')) {
-                const path = title.querySelector('.path');
-                if (path) {
-                    path.style.strokeDashoffset = '310';
-                }
-            }
-        });
-        
-        // Add active class to current title
-        const currentTitle = titles[currentIndex];
-        currentTitle.classList.add('active');
-        
-        // Handle specific animations
-        if (currentTitle.classList.contains('programmer')) {
-            currentTitle.style.width = currentTitle.scrollWidth + 'px';
-        }
-        
-        // Update index for next iteration
-        currentIndex = (currentIndex + 1) % titles.length;
-    }
+const words = ["Grafisk", "Web Design", "UX & UI"]; // Add your words here
+let index = 0;
+let currentWord = '';
+let letterIndex = 0;
+const typingSpeed = 100; // Speed of typing effect in milliseconds
+const erasingSpeed = 50; // Speed of erasing effect in milliseconds
+const pauseBetweenWords = 1000; // Pause before starting the next word
 
-    // Initial state
-    updateTitle();
-    
-    // Change title every 3.5 seconds
-    setInterval(updateTitle, 2500);
-});
+function type() {
+    if (letterIndex < currentWord.length) {
+        document.getElementById("expertise").textContent += currentWord.charAt(letterIndex);
+        letterIndex++;
+        setTimeout(type, typingSpeed);
+    } else {
+        setTimeout(erase, pauseBetweenWords);
+    }
+}
+
+function erase() {
+    const expertiseElement = document.getElementById("expertise");
+    if (letterIndex > 0) {
+        expertiseElement.textContent = currentWord.substring(0, letterIndex - 1);
+        letterIndex--;
+        setTimeout(erase, erasingSpeed);
+    } else {
+        index = (index + 1) % words.length; // Cycle through words
+        currentWord = words[index];
+        letterIndex = 0; // Reset letter index for the new word
+        setTimeout(type, typingSpeed); // Start typing the next word
+    }
+}
+
+function startTyping() {
+    currentWord = words[index];
+    type();
+}
+
+startTyping(); // Start the typing effect
