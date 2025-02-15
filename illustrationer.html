@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio website</title>
     <link rel="stylesheet" href="illustrationer.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div id="preloader"></div>
-    <header>
-        <a href="index.html">
-            <img src="images/athena-logo.png" alt="Menu" class="logo">
-        </a>
-        <nav class="header-nav">
-            <a href="about.html">OM MIG</a>
-            <a href="portfolio.html">PORTFOLIO</a>
-            <a href="contact.html">KONTAKT</a>
-        </nav>
-    </header>
+<header class="header">
+    <a href="index.html" class="logo">
+        <img src="images/athena-logo.png" alt="ATHENA Logo" />
+    </a>
+    <i class='bx bx-menu' id="menu-icon"></i>
 
+    <nav class="navbar">
+        <a href="#home" class=""></a>
+        <a href="#education">OM MIG</a>
+        <a href="#services">FÆRDIGHEDER</a>
+        <a href="#testimonials">PORTFOLIO</a>
+        <a href="#contact">KONTAKT</a>
+    </nav>
+
+</header>
 
     <main class="gallery">
         <h1>GRAFISK DESIGN</h1>
@@ -68,16 +70,40 @@
 
 
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="images/athena-logo.png" alt="Athena Logo" class="footer-logo-img">
-            </div>
-            <div class="footer-links">
-                <a href="https://www.linkedin.com/in/athena-habibi-074416301/" target="_blank">LinkedIn</a>
-                <a href="https://github.com" target="_blank">GitHub</a>
-                <a href="https://behance.net" target="_blank">Behance</a>
-            </div>
+        <div class="social">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+    
         </div>
+    
+        <ul class="list">
+            <li>
+                <a href="#">FAQ</a>
+            </li>
+    
+            <li>
+                <a href="#">Portfolio</a>
+            </li>
+    
+            <li>
+                <a href="#">About me</a>
+            </li>
+    
+            <li>
+                <a href="#">Kontakt</a>
+            </li>
+    
+            <li>
+                <a href="#">Programmer</a>
+            </li>
+            <P class="copyright">
+                © Athena Habibi | All Rights Reserved
+            </P>
+    
+        </ul>
+    
     </footer>
     <script src="script.js"></script>
 </body>
