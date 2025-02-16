@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio website</title>
+    <link rel="stylesheet" href="projekter.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<header class="header">
+    <a href="index.html#testimonials" class="logo">
+        <img src="images/athena-logo.png" alt="ATHENA Logo" />
+    </a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+
+    <nav class="navbar">
+        <a href="#home" class=""></a>
+
+</header>
+
+<section class="projekter">
+    <h1>PROJEKTER</h1>
+    <img src="images/projekter-Photoroom.png" alt="Projekter Image" class="projekter-image" />
+    <img src="images/projekter-Photoroom.png" alt="Another Image 1" class="projekter-image" style="display: none;" />
+    <img src="images/projekter-Photoroom.png" alt="Another Image 2" class="projekter-image" style="display: none;" />
+    <!-- Add more images as needed -->
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    
+    <!-- Dots for navigation -->
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <!-- Add more dots as needed -->
+    </div>
+
+    <div class="projekter-description">
+        <p id="slide-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="social" id="slide-social">
+            <a href="https://www.linkedin.com/in/athena-habibi-074416301/" target="_blank" rel="noopener noreferrer">
+                <i class="bx bx-link"></i>
+            </a>
+            <a href="https://github.com/Athenaelena5" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="social">
+        </div>
+        <div class="copyright">
+            &copy; 2025 Athena Habibi. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

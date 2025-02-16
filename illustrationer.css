@@ -5,10 +5,9 @@
     text-decoration: none;
     border: none;
     scroll-behavior: smooth;
-    font-family: "poppins", sans-serif;
+    font-family: 'Inter', sans-serif;
     }
-    
-    
+        
     :root {
     --bg-color: #f7f2e4;
     --second-bg-color: #c8bdac;
@@ -29,7 +28,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        padding: 4rem 12% 4rem;
+        padding: 0.5rem 12% 0.5rem;
         backdrop-filter: blur(10px);
         display: flex;
         justify-content: space-between;
@@ -98,7 +97,6 @@ main {
 
 .gallery-item:hover img {
     transform: scale(1.05); /* Slightly enlarge the image on hover */
-    filter: brightness(0.5); /* Darken the image */
 }
 
 .overlay {

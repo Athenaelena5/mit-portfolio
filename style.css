@@ -21,15 +21,18 @@ html {
     overflow-x: hidden;
 }
 body{
- background: var(--bg-color);
- color: var(--text-color);
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100vh; /* Ensure body takes full height */
+    background: var(--bg-color);
+    color: var(--text-color);
 }
 .header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 4rem 12% 4rem;
+    padding: 0.5rem 12% 0.5rem;
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -73,123 +76,6 @@ section{
     min-height: 100vh;
     padding: 10rem 12% 10rem;
 }
-.home{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15rem;
-}
-.home-content{
-display: flex;
-flex-direction: column;
-align-items: baseline;
-text-align: left;
-justify-content: center;
-margin-top: 3rem;
-}
-span{
-    color: rgb(52, 45, 36);
-}
-.logo span{
-    color: rgb(38, 36, 34);
-}
-.home-content h3{
-    margin-bottom: 2rem;
-    margin-top: 1rem;
-    font-size: 3.5rem;
-}
-.home-content h2 {
-    font-size: 5rem;
-    font-weight: 700;
-    margin-top: 1rem;
-    margin-bottom: 3rem;
-    line-height: 1;
-}
-.home-content h1{
-    font-size: 7rem;
-    font-weight: 700;
-    margin-top: 1.5rem;
-    margin-bottom: 3rem;
-    line-height: 1;
-    animation: fadeInSlideUp 1s ease forwards;
-}
-.home-img {
-    border-radius: 100%;
-    overflow: hidden;
-}
-.home-img img {
-    width: 50rem;
-    max-width: 50rem;
-    height: auto;
-    display: block;
-}
-
-
-.home-content p{
-font-size: 1.5rem;
-font-weight: 500;
-line-height: 1.8;
-max-width: 1000px;
-}
-.social-icons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-}
-.social-icons a{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4.5rem;
-    height: 4.5rem;
-    background: transparent;
-    border: 2px solid var(--main-color);
-    font-size: 2.5rem;
-    border-radius: 50%;
-    color: rgb(55, 45, 35);
-    margin: 3rem 1.5rem 3rem 0;
-    transition: 0.3s ease-in-out;
-}
-.social-icons a:hover{
-    color: var(--text-color);
-    transform: scale(1.3)translateY(-5px);
-    box-shadow: 0 0 25px var(--main-color);
-    background-color: var(--main-color);   
-}
-.btn{
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background: var(--main-color);
-    box-shadow: 0 0 25px rgb(217, 214, 199);
-    border-radius: 4rem;
-    font-size: 1.6rem;
-    color: #5d5142;
-    border: 2px solid transparent;
-    letter-spacing: 0.1rem;
-    font-weight: 600;
-    transition: 0.3s ease-in-out;
-    cursor: pointer;
-}
-.btn:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 50px var(--main-color);
-}
-.btn-group {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-.btn-group a:nth-of-type(2){
-    background-color: rgb(198, 181, 155);
-    color: var(--main-color);
-    border: 2px solid var(--main-color);
-    box-shadow: 0 0 25px transparent;
-}
-.btn-group a:nth-of-type(2):hover{
-    box-shadow: 0 0 25px var(--main-color);
-    background-color: var(--main-color);
-    color: #564839;
-}
 .text-animation {
     /* Removed the text animation styles */
 }
@@ -200,7 +86,7 @@ max-width: 1000px;
 }
 .education{
     padding: 100px 15px;
-    background: var(--second-bg-color);
+    background: var(--bg-color) !important; /* Updated background color with !important */
 }
 .education h2{
     margin-bottom: 5rem;
@@ -217,7 +103,7 @@ max-width: 1000px;
     position: absolute;
     width: 5px;
     height: 100%;
-    background-color: var(--main-color);
+    background-color: rgb(90, 78, 64);
     left: calc(50% - 1px);
 }
 .timeline-items{
@@ -235,17 +121,6 @@ max-width: 1000px;
 .timeline-item:nth-child(even){
     padding-left: calc(50% + 30px);
 }
-.timeline-dot{
-    height: 21px;
-    width: 21px;
-    background-color: var(--main-color);
-    box-shadow: 0 0 25px var(--main-color),
-                0 0 50px var(--main-color);
-    position: absolute;
-    left: calc(50% - 8px);
-    border-radius: 50%;
-    top: 10px;
-}
 .timeline-date{
     font-size: 20px;
     font-weight: 800;
@@ -253,11 +128,11 @@ max-width: 1000px;
     margin: 6px 0 15px;
 }
 .timeline-content{
-    background-color: var(--bg-color);
-    border: 3px solid var(--main-color);
+    background-color: var(--second-bg-color);
+    border: 3px solid var(--second-bg-color);
     padding: 30px 50px;
     border-radius: 4rem;
-    box-shadow: 0 0 10px var(--main-color);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
@@ -267,12 +142,12 @@ max-width: 1000px;
 }
 .timeline-content h3{
     font-size: 20px;
-    color: #564839;
+    color: #3d362f;
     margin: 0 0 10px;
     font-weight: 500;
 }
 .timeline-content p{
-    color: #564839;
+    color: #413a32;
     font-size: 16px;
     font-weight: 300;
     line-height: 22px;
@@ -289,13 +164,13 @@ max-width: 1000px;
     width: 50px;
 }
 
-.sevices{
-    background: var(--bg-color);
-    color: black;
+.services, .education {
+    background-color: var(--second-bg-color);
+    padding: 5rem 12%;
+    color: #3e3834;
 }
 .services h2{
     margin-bottom: 5rem;
-    color: #564839;
 }
 .services-container{
     display: grid;
@@ -304,7 +179,7 @@ max-width: 1000px;
     gap: 2.5rem;
 }
 .service-box{
-    background-color: var(--main-color);
+    background-color: var(--bg-color);
     height: 300px;
     border-radius: 3rem;
     border: 5px solid transparent;
@@ -312,7 +187,7 @@ max-width: 1000px;
     transition: 0.4s ease-in-out;
 }
 .service-box:hover{
-    background: rgba(201, 185, 165, 0.644);
+    background: var(--bg-color);
     color: rgb(87, 71, 59);
     border: 5px solid var(--main-color);
     transform: scale(1.03);
@@ -353,9 +228,9 @@ max-width: 1000px;
 }
 .testimonials-box img{
     width: 15rem;
-    border-radius: 50%;
-    border: 3px solid var(--main-color);
-    box-shadow: 0 0 25px var(--main-color);
+    border-radius: 0%;
+    border: 3px solid;
+    box-shadow: 0 0 25px;
 }
 .wrapper{
     display: grid;
@@ -365,8 +240,7 @@ max-width: 1000px;
 .testimonial-item{
     min-height: 550px;
     max-width: 450px;
-    background: rgba(0, 0, 0, 0.7);
-    border: 3px solid rgba(238, 238, 238, 0.2);
+    background: rgba(158, 145, 134, 0.298);
     border-radius: 2rem;
     margin: 0 2rem;
     padding: 30px 60px;
@@ -377,42 +251,62 @@ max-width: 1000px;
     justify-content: center;
     text-align: center;
     gap: 1.5rem;
-    color: white;
     transition: 0.4s ease-in-out;
 }
 .testimonial-item:hover{
-    border: 3px solid var(--main-color);
+    border: 3px solid rgba(133, 116, 102, 0);
     transform: translateY(-10px)scale(1.03);
-    box-shadow: 0 0 50px var(--main-color);
+    box-shadow: 0 0 50px rgba(255, 241, 219, 0.481);
 }
 .testimonial-item h2 {
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-size: 2.5rem;
-    color: white; /*ændre farven på teksten i dine sektioner*/
+    color: rgb(49, 39, 29); /*ændre farven på teksten i dine sektioner*/
 }
 .testimonial-item p{
     font-size: 1.3rem;
 }
 .testimonial-item a {
-    color: var(--bg-color);
-    text-decoration: none;
-}
-.testimonial-item a:hover {
-    color: var(--main-color);
-    text-decoration: underline;
+    color: inherit; /* Remove link color */
+    text-decoration: none; /* Remove underline */
 }
 .testimonial-item img {
-    margin-bottom: 3rem; /* Adjust this value to move the images up */
-    width: 70%; /* Optional: ensure the image fits the container */
-    height: auto; /* Maintain aspect ratio */
+    width: 250px; /* Increased width */
+    height: 250px; /* Increased height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border: none; /* Remove the border */
+}
+.testimonial-item .see-more-btn {
+    background-color: rgb(77, 68, 56); /* Set background color */
+    color: #f8ebd6; /* Set text color to white */
+    padding: 1rem 2rem; /* Add padding for better size */
+    border-radius: 2rem; /* Rounded corners */
+    font-size: 1.5rem; /* Font size */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    margin-top: 1rem; /* Space above the button */
+}
+.testimonial-item .see-more-btn:hover {
+    background-color: rgba(79, 70, 56, 0.8); /* Change background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+.testimonial-item a {
+    color: inherit; /* Remove link color */
+    text-decoration: none; /* Remove underline */
+}
+.testimonial-item img {
+    width: 250px; /* Increased width */
+    height: 250px; /* Increased height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
 }
 .contact{
     background-color: var(--second-bg-color);
 }
 .contact h2{
 margin-bottom: 3rem;
-color: #564839;
+color: #42392f;
 }
 .contact form{
     display: flex;
@@ -439,8 +333,19 @@ color: #564839;
     margin: 1.5rem 0;
     resize: none;
 }
-.contact form .btn{
-    margin-top: 2rem;
+.contact form .btn {
+    background-color: var(--main-color); /* Set background color */
+    color: #6a5e53; /* Set text color to white */
+    padding: 1.5rem 3rem; /* Add padding for better size */
+    border-radius: 2rem; /* Rounded corners */
+    font-size: 1.8rem; /* Font size */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+.contact form .btn:hover {
+    background-color: rgba(163, 152, 136, 0.8); /* Change background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 .footer{
     position: relative;
@@ -561,9 +466,6 @@ color: #564839;
     color: var(--main-color);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
-<<<<<<< HEAD
-/* styles.css */
-
 
 @keyframes fadeIn {
     0% { opacity: 0; transform: scale(0.8); }
@@ -578,4 +480,57 @@ color: #564839;
 #expertise {
     display: inline-block;
     animation: fadeIn 0.5s ease-in-out;
+}
+.profile-container {
+    width: 450px; /* Size */
+    height: 450px; /* Size */
+    border-radius: 100%; /* Circular shape */
+    overflow: hidden; /* Crop the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2px; /* Space between image and title */
+    margin-top: 2px;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    text-align: center; /* Center text within the container */
+    margin: auto; /* Center the profile container */
+    margin-top: 2px;
+    gap: 5px; /* Increase space between items in the container */
+}
+
+.profile-img {
+    width: 400px; /* Set a fixed width */
+    height: 400px; /* Set a fixed height to match width */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+.title {
+    font-size: 2rem !important; /* Further decrease the font size for the typing animation */
+    color: #7d6d5c; /* Text color */
+    text-align: center; /* Center the text */
+    margin: 0 !important; /* Remove any default margin to ensure centering */
+    margin-top: 30px !important; /* Increase space above the title to bring it lower */
+    margin-bottom: 5px !important; /* Reduce space between title and photo */
+}
+
+.title::after {
+    content: '';
+    display: inline-block;
+    width: 3px; /* Keep the width narrow */
+    height: 3.3rem; /* Height for a longer cursor */
+    background: rgb(149, 130, 107); /* Ensure the color stands out */
+    animation: blink 1s infinite; /* Keep the blinking effect */
+    margin-left: 5px; /* Add space between the text and the cursor */
+}
+
+.home-content h2 {
+    margin-top: 30px !important; /* Adjust this value to move the header lower */
+    text-align: center; /* Center the header text */
+    font-size: 5rem !important; /* Adjust the font size */
+    margin-bottom: 20px !important; /* Increase space between header and title */
+}
+
+.home {
+    margin-top: 100px; /* Increase this value to bring the entire section lower */
 }

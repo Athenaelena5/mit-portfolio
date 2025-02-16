@@ -1,38 +1,119 @@
-const words = ["Grafisk", "Web Design", "UX & UI"]; // Add your words here
+const words = ["Grafisk Designer", "Webudvikler", "Frontendudvikler", "UX/UI Researcher"];
 let index = 0;
 let currentWord = '';
 let letterIndex = 0;
-const typingSpeed = 100; // Speed of typing effect in milliseconds
-const erasingSpeed = 50; // Speed of erasing effect in milliseconds
-const pauseBetweenWords = 1000; // Pause before starting the next word
+let slideIndex = 0;
+let isAnimating = false; // Flag to prevent rapid clicking
+let currentSlideIndex = 0;
+
+const slides = [
+    {
+        text: "Slide 1: Lorem ipsum dolor sit amet.",
+        linkedin: "https://www.linkedin.com/in/athena-habibi-074416301/",
+        github: "https://github.com/Athenaelena5"
+    },
+    {
+        text: "Slide 2: Consectetur adipiscing elit.",
+        linkedin: "https://www.linkedin.com/in/another-profile/",
+        github: "https://github.com/another-profile"
+    },
+    {
+        text: "Slide 3: Sed do eiusmod tempor incididunt.",
+        linkedin: "https://www.linkedin.com/in/yet-another-profile/",
+        github: "https://github.com/yet-another-profile"
+    }
+    // Add more slides as needed
+];
 
 function type() {
-    if (letterIndex < currentWord.length) {
-        document.getElementById("expertise").textContent += currentWord.charAt(letterIndex);
+    if (letterIndex < words[index].length) {
+        currentWord += words[index].charAt(letterIndex);
+        document.querySelector('.title').textContent = currentWord;
         letterIndex++;
-        setTimeout(type, typingSpeed);
+        setTimeout(type, 100); // Adjust typing speed here
     } else {
-        setTimeout(erase, pauseBetweenWords);
+        setTimeout(deleteWord, 2000); // Wait before starting to delete
     }
 }
 
-function erase() {
-    const expertiseElement = document.getElementById("expertise");
+function deleteWord() {
     if (letterIndex > 0) {
-        expertiseElement.textContent = currentWord.substring(0, letterIndex - 1);
+        currentWord = currentWord.slice(0, -1);
+        document.querySelector('.title').textContent = currentWord;
         letterIndex--;
-        setTimeout(erase, erasingSpeed);
+        setTimeout(deleteWord, 100); // Adjust deleting speed here
     } else {
-        index = (index + 1) % words.length; // Cycle through words
-        currentWord = words[index];
-        letterIndex = 0; // Reset letter index for the new word
-        setTimeout(type, typingSpeed); // Start typing the next word
+        index = (index + 1) % words.length; // Move to the next word
+        setTimeout(type, 500); // Wait before starting to type the next word
     }
 }
 
-function startTyping() {
-    currentWord = words[index];
-    type();
+// Start the typing effect
+type();
+
+showSlides();
+
+function showSlides() {
+    const slides = document.getElementsByClassName("projekter-image");
+    const dots = document.getElementsByClassName("dot");
+    
+    // Hide all slides and remove active class from all dots
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; // Hide all slides
+        dots[i].className = dots[i].className.replace(" active", ""); // Remove active class from all dots
+    }
+    
+    slides[slideIndex].style.display = "block"; // Show the current slide
+    dots[slideIndex].className += " active"; // Add active class to the current dot
 }
 
-startTyping(); // Start the typing effect
+function currentSlide(n) {
+    currentSlideIndex = n - 1; // Adjust for zero-based index
+    updateSlide();
+}
+
+function changeSlide(n) {
+    currentSlideIndex += n;
+    if (currentSlideIndex < 0) {
+        currentSlideIndex = slides.length - 1; // Loop to last slide
+    } else if (currentSlideIndex >= slides.length) {
+        currentSlideIndex = 0; // Loop to first slide
+    }
+    updateSlide();
+}
+
+function updateSlide() {
+    const slideText = document.getElementById("slide-text");
+    const slideSocial = document.getElementById("slide-social");
+
+    // Update text
+    slideText.textContent = slides[currentSlideIndex].text;
+
+    // Update links
+    slideSocial.innerHTML = `
+        <a href="${slides[currentSlideIndex].linkedin}" target="_blank" rel="noopener noreferrer">
+            <i class="bx bx-link"></i>
+        </a>
+        <a href="${slides[currentSlideIndex].github}" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+        </a>
+    `;
+
+    // Update the displayed image
+    const images = document.querySelectorAll('.projekter-image');
+    images.forEach((img, index) => {
+        img.style.display = index === currentSlideIndex ? 'block' : 'none';
+    });
+
+    // Update the active dot
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+        dot.className = index === currentSlideIndex ? 'dot active' : 'dot';
+    });
+}
+
+// Initialize the first slide
+updateSlide();
+
+// Start the slideshow
+showSlides();
