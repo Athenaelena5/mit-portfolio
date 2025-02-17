@@ -198,24 +198,19 @@
 
 <section class="contact" id="contact">
     <h2 class="heading">Kontakt <span>Mig</span></h2>
-    <form action="">
+    <form action="send_email.php" method="POST">
         <div class="input-group">
             <div class="input-box">
-                <input type="text" placeholder="Navn">
-                <input type="email" placeholder="E-mail">
+                <input type="text" name="name" placeholder="Navn">
+                <input type="email" name="email" placeholder="E-mail">
             </div>
             <div class="input-box">
-                <input type="number"
-                placeholder="Telefonnummer">
-                <input type="text"
-                placeholder="Emne">
+                <input type="number" name="phone" placeholder="Telefonnummer">
+                <input type="text" name="subject" placeholder="Emne">
             </div>
         </div>
-
-
         <div class="input-group-2">
-            <textarea name="" id="" cols="30"
-            rows="10" placeholder="Besked"></textarea>
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Besked"></textarea>
             <input type="submit" value="Send Besked" class="btn">
         </div>
     </form> 
