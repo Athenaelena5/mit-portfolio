@@ -116,7 +116,7 @@ main {
 h1 {
     width: 100%;
     text-align: center;
-    font-size: 4em;
+    font-size: 5em;
     margin-bottom: 30px;
     margin-top: 50px;
     color: #44392b; /* Change this to your desired color */
@@ -153,7 +153,7 @@ h1 {
     position: absolute;
     top: 50%; /* Reset top position to where it was before */
     width: auto;
-    padding: 20px; /* Keep padding for button size */
+    padding: 25px; /* Keep padding for button size */
     color: rgb(255, 251, 238);
     font-weight: bold;
     font-size: 20px;
@@ -209,12 +209,15 @@ h1 {
     text-align: center; /* Center the text */
 }
 .projekter-description p {
-    font-size: 1.5em; /* Increase font size to make the text larger */
-    margin: 20px 0; /* Add vertical margin for more space above and below */
-    max-width: 600px; /* Set a maximum width to make the text more narrow */
-    margin-left: auto; /* Center the paragraph */
-    margin-right: auto; /* Center the paragraph */
-    text-align: center; /* Center the text */
+    font-size: 1.6em; /* Øget skriftstørrelse for bedre læsbarhed */
+    line-height: 1.6; /* Øget linjeafstand for mere luft mellem linjerne */
+    margin: 20px 0; /* Behold vertikal margin for plads over og under */
+    max-width: 700px; /* Øget maksimal bredde for at gøre teksten mere læsevenlig */
+    margin-left: auto; /* Centrer paragrafen */
+    margin-right: auto; /* Centrer paragrafen */
+    text-align: justify; /* Juster teksten for et mere professionelt udseende */
+    color: #3b3b3b; /* Mørkere farve for bedre kontrast */
+    padding: 0 20px; /* Tilføjelse af indvendig margen for at undgå, at teksten rammer kanten */
 }
 .social {
     display: flex; /* Use flexbox for alignment */
@@ -308,4 +311,5 @@ h1 {
     margin: 20px 0; /* Add vertical margin for spacing */
     font-weight: bold; /* Make titles bold */
     margin-bottom: -50px;
+    margin-top: -15px;
 }
