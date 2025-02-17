@@ -21,9 +21,9 @@ html {
     overflow-x: hidden;
 }
 body{
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    height: 100vh; /* Ensure body takes full height */
+    margin: 0; 
+    padding: 0; 
+    height: 100vh; 
     background: var(--bg-color);
     color: var(--text-color);
 }
@@ -76,9 +76,6 @@ section{
     min-height: 100vh;
     padding: 10rem 12% 10rem;
 }
-.text-animation {
-    /* Removed the text animation styles */
-}
 .heading{
     font-size: 8rem;
     text-align: center;
@@ -86,7 +83,7 @@ section{
 }
 .education{
     padding: 100px 15px;
-    background: var(--bg-color) !important; /* Updated background color with !important */
+    background: var(--bg-color) !important; 
 }
 .education h2{
     margin-bottom: 5rem;
@@ -253,55 +250,55 @@ section{
     text-align: center;
     gap: 1.5rem;
     transition: 0.4s ease-in-out;
-    border: none; /* Removed border */
+    border: none; 
 }
 .testimonial-item:hover{
-    border: none; /* Ensure no border on hover */
+    border: none; 
     transform: translateY(-10px) scale(1.03);
     box-shadow: 0 0 50px rgba(255, 241, 219, 0);
 }
 .testimonial-item h2 {
-    margin-top: 2rem; /* Increased space above the title */
-    margin-bottom: 1rem; /* Space below the title */
-    font-size: 2.5rem; /* Adjust the font size if needed */
-    color: #2c2a25; /* Updated color to a darker shade */
+    margin-top: 2rem; 
+    margin-bottom: 1rem; 
+    font-size: 2.5rem; 
+    color: #2c2a25; 
 }
 .testimonial-item p{
     font-size: 1.3rem;
 }
 .testimonial-item a {
-    color: inherit; /* Remove link color */
-    text-decoration: none; /* Remove underline */
+    color: inherit; 
+    text-decoration: none; 
 }
 .testimonial-item img {
-    width: 250px; /* Increased width */
-    height: 250px; /* Increased height */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-    border: none; /* Remove the border */
+    width: 250px; 
+    height: 250px; 
+    object-fit: cover; 
+    border: none; 
 }
 .testimonial-item .see-more-btn {
-    background-color: rgb(77, 68, 56); /* Set background color */
-    color: #f8ebd6; /* Set text color to white */
-    padding: 1rem 2rem; /* Add padding for better size */
-    border-radius: 2rem; /* Rounded corners */
-    font-size: 1.5rem; /* Font size */
-    border: none; /* Remove default border */
-    cursor: pointer; /* Change cursor to pointer */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
-    margin-top: 2rem; /* Increased space above the button */
+    background-color: rgb(77, 68, 56); 
+    color: #f8ebd6; 
+    padding: 1rem 2rem; 
+    border-radius: 2rem; 
+    font-size: 1.5rem; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    margin-top: 2rem; 
 }
 .testimonial-item .see-more-btn:hover {
-    background-color: rgba(79, 70, 56, 0.8); /* Change background on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: rgba(79, 70, 56, 0.8); 
+    transform: scale(1.05); 
 }
 .testimonial-item a {
-    color: inherit; /* Remove link color */
-    text-decoration: none; /* Remove underline */
+    color: inherit; 
+    text-decoration: none; 
 }
 .testimonial-item img {
-    width: 250px; /* Increased width */
-    height: 250px; /* Increased height */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
+    width: 250px; 
+    height: 250px; 
+    object-fit: cover; 
 }
 .contact{
     background-color: var(--second-bg-color);
@@ -336,18 +333,18 @@ color: #3b3228;
     resize: none;
 }
 .contact form .btn {
-    background-color: rgb(98, 88, 77); /* Set background color */
-    color: #fdf3eb; /* Set text color to white */
-    padding: 1.5rem 3rem; /* Add padding for better size */
-    border-radius: 2rem; /* Rounded corners */
-    font-size: 1.8rem; /* Font size */
-    border: none; /* Remove default border */
-    cursor: pointer; /* Change cursor to pointer */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    background-color: rgb(98, 88, 77); 
+    color: #fdf3eb; 
+    padding: 1.5rem 3rem; 
+    border-radius: 2rem; 
+    font-size: 1.8rem; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 .contact form .btn:hover {
-    background-color: rgba(109, 98, 80, 0.8); /* Change background on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: rgba(109, 98, 80, 0.8); 
+    transform: scale(1.05); 
 }
 .footer{
     position: relative;
@@ -407,8 +404,8 @@ color: #3b3228;
     color: #564839;
 }
 .logo img {
-    width: 125px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 125px; 
+    height: auto; 
 }
 .skills {
     padding: 2rem 12%;
@@ -484,55 +481,55 @@ color: #3b3228;
     animation: fadeIn 0.5s ease-in-out;
 }
 .profile-container {
-    width: 450px; /* Size */
-    height: 450px; /* Size */
-    border-radius: 100%; /* Circular shape */
-    overflow: hidden; /* Crop the image */
+    width: 450px; 
+    height: 450px; 
+    border-radius: 100%; 
+    overflow: hidden; 
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2px; /* Space between image and title */
+    margin-bottom: 2px; 
     margin-top: 2px;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    text-align: center; /* Center text within the container */
-    margin: auto; /* Center the profile container */
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    margin: auto; 
     margin-top: 2px;
-    gap: 5px; /* Increase space between items in the container */
+    gap: 5px; 
 }
 
 .profile-img {
-    width: 400px; /* Set a fixed width */
-    height: 400px; /* Set a fixed height to match width */
-    border-radius: 50%; /* Make the image circular */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
+    width: 400px; 
+    height: 400px; 
+    border-radius: 50%; 
+    object-fit: cover; 
 }
 .title {
-    font-size: 2rem !important; /* Further decrease the font size for the typing animation */
-    color: #7d6d5c; /* Text color */
-    text-align: center; /* Center the text */
-    margin: 0 !important; /* Remove any default margin to ensure centering */
-    margin-top: 30px !important; /* Increase space above the title to bring it lower */
-    margin-bottom: 5px !important; /* Reduce space between title and photo */
+    font-size: 2rem !important; 
+    color: #7d6d5c; 
+    text-align: center; 
+    margin: 0 !important; 
+    margin-top: 30px !important; 
+    margin-bottom: 5px !important; 
 }
 
 .title::after {
     content: '';
     display: inline-block;
-    width: 3px; /* Keep the width narrow */
-    height: 3.3rem; /* Height for a longer cursor */
-    background: rgb(149, 130, 107); /* Ensure the color stands out */
-    animation: blink 1s infinite; /* Keep the blinking effect */
-    margin-left: 5px; /* Add space between the text and the cursor */
+    width: 3px; 
+    height: 3.3rem; 
+    background: rgb(149, 130, 107); 
+    animation: blink 1s infinite; 
+    margin-left: 5px;
 }
 
 .home-content h2 {
-    margin-top: 30px !important; /* Adjust this value to move the header lower */
-    text-align: center; /* Center the header text */
-    font-size: 5rem !important; /* Adjust the font size */
-    margin-bottom: 20px !important; /* Increase space between header and title */
+    margin-top: 30px !important;
+    text-align: center;
+    font-size: 5rem !important;
+    margin-bottom: 20px !important;
 }
 
 .home {
-    margin-top: 100px; /* Increase this value to bring the entire section lower */
+    margin-top: 100px; 
 }
