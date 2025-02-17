@@ -116,9 +116,9 @@ main {
 h1 {
     width: 100%;
     text-align: center;
-    font-size: 3em;
+    font-size: 4em;
     margin-bottom: 30px;
-    margin-top: 150px;
+    margin-top: 50px;
     color: #44392b; /* Change this to your desired color */
     animation: fadeIn 1s ease forwards; /* Apply the fade-in animation */
 }
@@ -300,4 +300,12 @@ h1 {
 .logo img {
     width: 125px; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
+}
+
+.slide-title {
+    font-size: 2.5em; /* Increased font size for all slide titles */
+    text-align: center; /* Center the title */
+    margin: 20px 0; /* Add vertical margin for spacing */
+    font-weight: bold; /* Make titles bold */
+    margin-bottom: -50px;
 }

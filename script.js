@@ -5,22 +5,27 @@ let letterIndex = 0;
 let slideIndex = 0;
 let isAnimating = false; // Flag to prevent rapid clicking
 let currentSlideIndex = 0;
+const titles = [
+    "Jerry's Restaurant & Teria",
+    "Steeno Museum",
+    "Nippon Måltidskasser"
+]; // Array of titles corresponding to each slide
 
 const slides = [
     {
         text: "Slide 1: Lorem ipsum dolor sit amet.",
-        linkedin: "https://www.linkedin.com/in/athena-habibi-074416301/",
+        linkedin: "http://jerrys-eksamen.aeh.dk",
         github: "https://github.com/Athenaelena5"
     },
     {
         text: "Slide 2: Consectetur adipiscing elit.",
-        linkedin: "https://www.linkedin.com/in/another-profile/",
-        github: "https://github.com/another-profile"
+        linkedin: "http://interaktiv-storytelling.aeh.dk",
+        github: "https://github.com/Athenaelena5"
     },
     {
         text: "Slide 3: Sed do eiusmod tempor incididunt.",
         linkedin: "https://www.linkedin.com/in/yet-another-profile/",
-        github: "https://github.com/yet-another-profile"
+        github: "https://github.com/Athenaelena5"
     }
     // Add more slides as needed
 ];
@@ -75,9 +80,9 @@ function currentSlide(n) {
 function changeSlide(n) {
     currentSlideIndex += n;
     if (currentSlideIndex < 0) {
-        currentSlideIndex = slides.length - 1; // Loop to last slide
-    } else if (currentSlideIndex >= slides.length) {
-        currentSlideIndex = 0; // Loop to first slide
+        currentSlideIndex = titles.length - 1; // Loop back to the last slide
+    } else if (currentSlideIndex >= titles.length) {
+        currentSlideIndex = 0; // Loop back to the first slide
     }
     updateSlide();
 }
@@ -110,6 +115,10 @@ function updateSlide() {
     dots.forEach((dot, index) => {
         dot.className = index === currentSlideIndex ? 'dot active' : 'dot';
     });
+
+    // Update the title for the current slide
+    const slideTitle = document.querySelector('.slide-title'); // Ensure this matches your HTML structure
+    slideTitle.textContent = titles[currentSlideIndex]; // Update title
 }
 
 // Initialize the first slide
