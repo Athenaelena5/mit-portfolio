@@ -651,3 +651,13 @@ color: #3b3228;
         font-size: 5rem;
     }
 }
+@media (max-width: 600px) {
+    .services-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-left: -10%;
+        margin-right: -10%;
+    }
+}
