@@ -40,7 +40,7 @@ function type() {
         currentWord += words[index].charAt(letterIndex);
         document.querySelector('.title').textContent = currentWord;
         letterIndex++;
-        setTimeout(type, 100);
+        setTimeout(type, 70);
     } else {
         setTimeout(deleteWord, 2000); 
     }
@@ -51,7 +51,7 @@ function deleteWord() {
         currentWord = currentWord.slice(0, -1);
         document.querySelector('.title').textContent = currentWord;
         letterIndex--;
-        setTimeout(deleteWord, 100); 
+        setTimeout(deleteWord, 70);
     } else {
         index = (index + 1) % words.length;
         setTimeout(type, 500); 
