@@ -66,10 +66,18 @@ body{
     border-bottom: 3px solid var(--main-color);
     background-color: transparent;
 }
-#menu-icon{
-  font-size: 3.6rem;
-  color: var(--main-color);
-  display:none;
+.navbar a i {
+    color: #16120c;
+    transition: color 0.3s ease;
+}
+.navbar a:hover i {
+    color: var(--main-color);
+}
+.menu-icon {
+    display: none; /* Hidden by default */
+    font-size: 3.6rem;
+    color: rgb(48, 44, 39);
+    cursor: pointer;
 }
 
 section{
@@ -588,26 +596,25 @@ color: #3b3228;
     }
 }
 @media(max-width: 895px){
-    #menu-icon{
-        display: block;
+    .menu-icon {
+        display: block; /* Show burger icon on smaller screens */
     }
-    .navbar{
+    .navbar {
+        display: none; /* Hide navbar by default on smaller screens */
         position: absolute;
         top: 100%;
         right: 0;
         width: 50%;
         padding: 1rem 3%;
-        background: black;
-        backdrop-filter: blur(20px);
+        background: rgb(78, 72, 66);
         border-bottom-left-radius: 2rem;
         border-left: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
-        display: none;
     }
-    .navbar.active{
-        display: block;
+    .navbar.active {
+        display: block; /* Show navbar when active */
     }
-    .navbar a{
+    .navbar a {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
