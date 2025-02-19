@@ -615,8 +615,8 @@ color: #3b3228;
         display: block; /* Show navbar when active */
     }
     .profile-img {
-        width: 350px; 
-        height: 350px; 
+        width: 300px; 
+        height: 300px; 
         border-radius: 50%; 
         object-fit: cover; 
         margin-right: 10%;
@@ -682,4 +682,33 @@ color: #3b3228;
     width: 100%; /* Set width to 100% to match the others */
     max-width: 600px; /* Optional: Set a max-width to control the size */
 }
+    .home-content h1 {
+        font-size: 3rem !important; /* Adjusted font size for smaller screens */
+    }
+
+    .home-content h3 {
+        font-size: 1rem; /* Adjusted font size for smaller screens */
+    }
+    .title {
+        font-size: 1rem; /* Adjusted font size for smaller screens */
+    }
+}
+@media (max-width: 400px) {
+    .profile-img {
+        width: 260px; /* Adjusted width for smaller screens */
+        height: 260px; /* Adjusted height for smaller screens */
+        margin-right: 40%;
+    }
+    .service-box {
+        height: 380px; /* Increased height for service boxes on smaller screens */
+    }
+    .education .timeline-item {
+        width: 100%; /* Set width to 100% for maximum width */
+        max-width: none; /* Remove max-width to allow full width */
+        padding: 20px; /* Maintain padding for uniformity */
+        margin: 10px auto; /* Center the items with auto margins */
+    }
+}
+.education .timeline-content h3 {
+    font-weight: bold; /* Make the titles bold */
 }

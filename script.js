@@ -1,4 +1,4 @@
-const words = ["Grafisk Designer", "Webudvikler", "Frontendudvikler", "UX/UI Researcher"];
+const words = ["Grafisk Designer", "Webudvikler", "Programmør", "UX/UI Researcher"];
 let index = 0;
 let currentWord = '';
 let letterIndex = 0;
@@ -136,3 +136,18 @@ function toggleNavbar() {
     const navbar = document.querySelector('.navbar');
     navbar.classList.toggle('active'); // Toggle the active class
 }
+
+function updateTitleFontSize() {
+    const titleElement = document.querySelector('.title');
+    if (window.innerWidth <= 600) {
+        titleElement.style.fontSize = '2rem'; // Further reduced font size for mobile
+    } else {
+        titleElement.style.fontSize = '5rem'; // Default font size for larger screens
+    }
+}
+
+// Call the function on load
+updateTitleFontSize();
+
+// Add an event listener to adjust font size on window resize
+window.addEventListener('resize', updateTitleFontSize);
