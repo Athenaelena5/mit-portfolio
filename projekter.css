@@ -9,7 +9,7 @@
 }
 
 :root {
-    --bg-color: #f7f2e4;
+    --bg-color: #F7F1E5;
     --second-bg-color: #c8bdac;
     --text-color: #564839;
     --main-color: #e6dac5;
@@ -132,12 +132,11 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    padding: 0;
+    padding: 2rem;
 }
 
 .projekter-image {
-    width: 90%;
+    width: 100%;
     max-width: 800px;
     height: auto;
     transition: transform 0.5s ease;
@@ -207,6 +206,7 @@ h1 {
 .projekter-description {
     margin-top: 30px;
     text-align: center;
+    padding: 1rem;
 }
 .projekter-description p {
     font-size: 1.6em;
@@ -312,4 +312,166 @@ h1 {
     font-weight: bold;
     margin-bottom: -50px;
     margin-top: -15px;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive styles for mobile screens */
+@media (max-width: 600px) {
+    .projekter {
+        padding: 4rem; /* Adjust padding for smaller screens */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .projekter-image {
+        width: 100%; /* Make image container full width */
+        max-width: 800px; /* Limit max width */
+        height: auto; /* Maintain aspect ratio */
+        margin-top: 10px;
+    }
+
+    .responsive-image {
+        width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    h1 {
+        font-size: 4em; /* Adjust heading size for mobile */
+        margin-top: 100px;;
+    }
+
+    .projekter-description {
+        text-align: center; /* Center text for better readability */
+        padding: 10rem; /* Add padding for mobile */
+    }
+
+    .projekter-description p {
+        font-size: 1.2em; /* Adjust paragraph size for mobile */
+    }
+
+    .social {
+        flex-direction: row; /* Ensure icons are in a row */
+        align-items: center; /* Center social icons vertically */
+    }
+
+    .social a {
+        font-size: 25px;
+        color: #564839;
+        border: 2px solid var(--main-color);
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        margin: 0 10px; /* Add horizontal margin for spacing between icons */
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    /* Additional responsive styles for other elements */
+    body {
+        margin: 0; 
+        padding: 0; 
+        height: auto; /* Allow body to adjust height */
+    }
+
+    .header {
+        padding: 0.8rem 3%; /* Adjust header padding */
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar {
+        display: none; /* Hide navbar by default on smaller screens */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: rgb(78, 72, 66);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+    }
+    .center-image {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .dot-container {
+        text-align: center;
+        margin-top: -100px;
+    }
+    
+    .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+        background-color: rgb(69, 58, 47);
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        opacity: 0.5;
+    }
+    
+    .dot:hover {
+        opacity: 1;
+    }
+    
+    .dot.active {
+        background-color: rgb(109, 93, 74);
+        opacity: 1;
+    }
+    .projekter-description {
+        margin-top: 30px;
+        text-align: center;
+        padding: 1rem;
+    }
+    .projekter-description p {
+        font-size: 2em;
+        line-height: 1.6;
+        margin: 20px 0;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+        color: #3b3b3b;
+        padding: 0 20px;
+    }
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 20px;
+        color: rgb(255, 251, 238);
+        font-weight: bold;
+        font-size: 20px;
+        transition: background-color 0.3s ease;
+        border-radius: 50%;
+        user-select: none;
+        background-color: rgba(114, 101, 90, 0.5);
+    }
+    
+    .next {
+        right: 20px;
+    }
+    
+    .prev {
+        left: 20px;
+    }
+    
+    .prev:hover, .next:hover {
+        background-color: rgba(95, 78, 67, 0.8);
+    }
+
+
+
+
 }

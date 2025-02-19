@@ -9,7 +9,7 @@
     }
         
     :root {
-    --bg-color: #f7f2e4;
+    --bg-color: #F7F1E5;
     --second-bg-color: #c8bdac;
     --text-color: #564839;
     --main-color: #e6dac5;
@@ -227,4 +227,22 @@ h1 {
 .logo img {
     width: 125px; 
     height: auto; 
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    .gallery-item {
+        width: 100%;
+    }
+    .gallery-item img {
+        width: 100%; 
+        height: auto; 
+    }
+    .center-logo {
+        width: 100%; 
+        height: auto; 
+    }
 }

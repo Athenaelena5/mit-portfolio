@@ -8,7 +8,7 @@ let currentSlideIndex = 0;
 const titles = [
     "Jerry's Restaurant & Teria",
     "Steeno Museum",
-    "Nippon Måltidskasser"
+    // "Nippon Måltidskasser" // Removed third title
 ]; 
 
 const slides = [
@@ -22,17 +22,17 @@ const slides = [
         linkedin: "http://interaktiv-storytelling.aeh.dk",
         github: "https://github.com/Athenaelena5"
     },
-    {
-        text: "Slide 3: Sed do eiusmod tempor incididunt.",
-        linkedin: "https://www.linkedin.com/in/yet-another-profile/",
-        github: "https://github.com/Athenaelena5"
-    }
+    // { // Removed third slide
+    //     text: "Slide 3: Sed do eiusmod tempor incididunt.",
+    //     linkedin: "https://www.linkedin.com/in/yet-another-profile/",
+    //     github: "https://github.com/Athenaelena5"
+    // }
 ];
 
 let slideTexts = [
     "I mit arbejde med Jerry's Restaurant har jeg været involveret i flere aspekter af deres digitale tilstedeværelse, herunder UX/UI, design og kodning. Jeg har arbejdet med at skabe en brugervenlig og æstetisk appellerende oplevelse, der afspejler restaurantens varme og kvalitet. Fra design af interface til kodning af funktioner, har jeg sikret, at både funktionalitet og visuel identitet er i harmoni og lever op til gæsternes forventninger. Herunder finder du et link til hjemmesiden og mit Github repository.",
     "I mit arbejde med Steno Museum har jeg været involveret i at udvikle en digital løsning, der fremmer museets interaktive og læringsrige oplevelser. Jeg har arbejdet med at skabe en brugervenlig og engagerende platform, der gør det muligt for besøgende at dykke dybere ned i udstillingerne, både under og efter deres besøg. Fra design af interface til kodning af funktionalitet har jeg sikret, at løsningen understøtter museets mål om at gøre videnskab og historie tilgængeligt for et bredt publikum. Herunder finder du et link til hjemmesiden og mit Github repository.",
-    "Text for Nippon Måltidskasser" 
+    // "Text for Nippon Måltidskasser" // Removed third slide text
 ];
 
 function type() {

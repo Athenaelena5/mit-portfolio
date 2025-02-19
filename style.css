@@ -10,7 +10,7 @@ font-family: 'Inter', sans-serif;
 
 
 :root {
---bg-color: #f7f2e4;
+--bg-color: #F7F1E5;
 --second-bg-color: #c8bdac;
 --text-color: #564839;
 --main-color: #e6dac5;
@@ -62,12 +62,12 @@ body{
 }
 .navbar a:hover,
 .navbar a.active{
-    color: rgba(78, 67, 59, 0.975);
+    color: rgba(235, 217, 208, 0.975);
     border-bottom: 3px solid var(--main-color);
     background-color: transparent;
 }
 .navbar a i {
-    color: #16120c;
+    color: #160c0c;
     transition: color 0.3s ease;
 }
 .navbar a:hover i {
