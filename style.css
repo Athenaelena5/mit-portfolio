@@ -614,6 +614,13 @@ color: #3b3228;
     .navbar.active {
         display: block; /* Show navbar when active */
     }
+    .profile-img {
+        width: 350px; 
+        height: 350px; 
+        border-radius: 50%; 
+        object-fit: cover; 
+        margin-right: 10%;
+    }
     .navbar a {
         display: block;
         font-size: 2rem;
@@ -667,4 +674,12 @@ color: #3b3228;
         margin-left: -10%;
         margin-right: -10%;
     }
+    .education .timeline-item {
+    padding: 20px; /* Adjust padding to reduce the size of the third box */
+    margin: 10px 0; /* Adjust margin if necessary for spacing */
+}
+.education .timeline-item:nth-child(3) {
+    width: 100%; /* Set width to 100% to match the others */
+    max-width: 600px; /* Optional: Set a max-width to control the size */
+}
 }
