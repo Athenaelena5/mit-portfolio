@@ -319,10 +319,10 @@ h1 {
     height: auto;
 }
 
-/* Responsive styles for mobile screens */
+
 @media (max-width: 600px) {
     .projekter {
-        padding: 4rem; /* Adjust padding for smaller screens */
+        padding: 4rem; 
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -331,34 +331,34 @@ h1 {
     }
 
     .projekter-image {
-        width: 100%; /* Make image container full width */
-        max-width: 800px; /* Limit max width */
-        height: auto; /* Maintain aspect ratio */
+        width: 100%; 
+        max-width: 800px; 
+        height: auto; 
         margin-top: 10px;
     }
 
     .responsive-image {
-        width: 100%; /* Make image responsive */
-        height: auto; /* Maintain aspect ratio */
+        width: 100%; 
+        height: auto;
     }
 
     h1 {
-        font-size: 4em; /* Adjust heading size for mobile */
+        font-size: 4em; 
         margin-top: 100px;;
     }
 
     .projekter-description {
-        text-align: center; /* Center text for better readability */
-        padding: 10rem; /* Add padding for mobile */
+        text-align: center; 
+        padding: 10rem;
     }
 
     .projekter-description p {
-        font-size: 1.2em; /* Adjust paragraph size for mobile */
+        font-size: 1.2em; 
     }
 
     .social {
-        flex-direction: row; /* Ensure icons are in a row */
-        align-items: center; /* Center social icons vertically */
+        flex-direction: row; 
+        align-items: center; 
     }
 
     .social a {
@@ -371,24 +371,24 @@ h1 {
         display: inline-block;
         text-align: center;
         border-radius: 50%;
-        margin: 0 10px; /* Add horizontal margin for spacing between icons */
+        margin: 0 10px;
         transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
 
-    /* Additional responsive styles for other elements */
+    
     body {
         margin: 0; 
         padding: 0; 
-        height: auto; /* Allow body to adjust height */
+        height: auto; 
     }
 
     .header {
-        padding: 0.8rem 3%; /* Adjust header padding */
+        padding: 0.8rem 3%; 
         backdrop-filter: blur(10px);
     }
 
     .navbar {
-        display: none; /* Hide navbar by default on smaller screens */
+        display: none;
         position: absolute;
         top: 100%;
         right: 0;

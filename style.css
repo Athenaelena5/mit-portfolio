@@ -597,10 +597,10 @@ color: #3b3228;
 }
 @media(max-width: 895px){
     .menu-icon {
-        display: block; /* Show burger icon on smaller screens */
+        display: block; 
     }
     .navbar {
-        display: none; /* Hide navbar by default on smaller screens */
+        display: none; 
         position: absolute;
         top: 100%;
         right: 0;
@@ -612,7 +612,7 @@ color: #3b3228;
         border-bottom: 2px solid var(--main-color);
     }
     .navbar.active {
-        display: block; /* Show navbar when active */
+        display: block; 
     }
     .profile-img {
         width: 300px; 
@@ -675,40 +675,40 @@ color: #3b3228;
         margin-right: -10%;
     }
     .education .timeline-item {
-    padding: 20px; /* Adjust padding to reduce the size of the third box */
-    margin: 10px 0; /* Adjust margin if necessary for spacing */
+    padding: 20px; 
+    margin: 10px 0;
 }
 .education .timeline-item:nth-child(3) {
-    width: 100%; /* Set width to 100% to match the others */
-    max-width: 600px; /* Optional: Set a max-width to control the size */
+    width: 100%; 
+    max-width: 600px; 
 }
     .home-content h1 {
-        font-size: 3rem !important; /* Adjusted font size for smaller screens */
+        font-size: 3rem !important;
     }
 
     .home-content h3 {
-        font-size: 1rem; /* Adjusted font size for smaller screens */
+        font-size: 1rem;
     }
     .title {
-        font-size: 1rem; /* Adjusted font size for smaller screens */
+        font-size: 1rem; 
     }
 }
 @media (max-width: 400px) {
     .profile-img {
-        width: 260px; /* Adjusted width for smaller screens */
-        height: 260px; /* Adjusted height for smaller screens */
+        width: 260px;
+        height: 260px; 
         margin-right: 40%;
     }
     .service-box {
-        height: 380px; /* Increased height for service boxes on smaller screens */
+        height: 380px; 
     }
     .education .timeline-item {
-        width: 100%; /* Set width to 100% for maximum width */
-        max-width: none; /* Remove max-width to allow full width */
-        padding: 20px; /* Maintain padding for uniformity */
-        margin: 10px auto; /* Center the items with auto margins */
+        width: 100%; 
+        max-width: none; 
+        padding: 20px; 
+        margin: 10px auto; 
     }
 }
 .education .timeline-content h3 {
-    font-weight: bold; /* Make the titles bold */
+    font-weight: bold;
 }
