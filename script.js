@@ -1,4 +1,4 @@
-const words = ["Grafisk Designer", "Webudvikler", "Programmør", "UX/UI Researcher"];
+const words = ["Grafiker", "Webudvikler", "Programmør"];
 let index = 0;
 let currentWord = '';
 let letterIndex = 0;

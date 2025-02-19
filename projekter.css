@@ -406,7 +406,7 @@ h1 {
     
     .dot-container {
         text-align: center;
-        margin-top: -100px;
+        margin-top: -75px;
     }
     
     .dot {
@@ -449,10 +449,10 @@ h1 {
         position: absolute;
         top: 50%;
         width: auto;
-        padding: 20px;
+        padding: 15px;
         color: rgb(255, 251, 238);
         font-weight: bold;
-        font-size: 20px;
+        font-size: 16px;
         transition: background-color 0.3s ease;
         border-radius: 50%;
         user-select: none;
@@ -470,8 +470,4 @@ h1 {
     .prev:hover, .next:hover {
         background-color: rgba(95, 78, 67, 0.8);
     }
-
-
-
-
 }
